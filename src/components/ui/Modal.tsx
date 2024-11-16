@@ -1,5 +1,6 @@
 import { ReactNode, useState } from "react";
 import Button from "./Button";
+import Image from "./Image";
 
 type ModalProps = {
   children: ReactNode;
@@ -23,16 +24,12 @@ export default function Modal({ children, content }: ModalProps) {
   ) : (
     <div>
       <div>{children}</div>
-      <div
-        onClick={() => toggleModal()}
-        className="fixed inset-0 flex w-screen items-center justify-center bg-slate-700 bg-opacity-80 backdrop-blur-sm"
-      >
-        <div className="flex h-screen w-screen flex-row flex-wrap items-center justify-center opacity-100 sm:gap-8">
-          <div className="w-60 drop-shadow-lg md:w-80 lg:w-96">{children}</div>
-          <div className="h-2/5 w-60 drop-shadow-lg sm:h-3/5 md:w-80 lg:w-96">
-            {content}
-          </div>
-        </div>
+      <div className="fixed inset-0 flex items-center justify-center">
+        <div className="z-10 flex items-center justify-center">{content}</div>
+        <div
+          onClick={() => toggleModal()}
+          className="absolute h-screen w-screen bg-slate-700 bg-opacity-80"
+        ></div>
       </div>
     </div>
   );

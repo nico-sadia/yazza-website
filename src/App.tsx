@@ -5,7 +5,7 @@ import ContentContainer from "./pages/home/ContentContainer";
 function App() {
   return (
     <>
-      <div className="font-rubik w-screen">
+      <div className="font-rubik max-w-screen overflow-x-hidden">
         <Navbar />
         <ContentContainer />
       </div>

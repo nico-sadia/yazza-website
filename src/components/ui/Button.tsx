@@ -8,7 +8,7 @@ export default function Button({ children, path, ...props }: ButtonProps) {
   return (
     <button
       {...props}
-      className="rounded-xl border-2 border-stone-700 bg-stone-800 px-2 py-1 transition-all hover:bg-stone-600"
+      className="border-[1px[] rounded-xl border-slate-300 px-2 py-1 transition-all"
     >
       {children}
     </button>

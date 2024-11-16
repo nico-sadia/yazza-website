@@ -1,11 +1,13 @@
-type ImageProps = {
-  src: string;
-};
+import { ImgHTMLAttributes } from "react";
 
-export default function Image({ src }: ImageProps) {
+interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
+  src: string;
+}
+
+export default function Image({ src, ...props }: ImageProps) {
   return (
     <>
-      <img src={src} className="h-full w-full" />
+      <img {...props} src={src} className="h-full" />
     </>
   );
 }

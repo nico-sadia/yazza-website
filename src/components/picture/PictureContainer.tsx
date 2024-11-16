@@ -1,13 +1,13 @@
 import InfoContainer from "./InfoContainer";
 import Image from "../ui/Image";
-import Modal from "../ui/Modal";
 
 export default function PictureContainer() {
   return (
-    <>
-      <Modal content=<InfoContainer />>
+    <div className="flex flex-row flex-wrap items-center justify-center gap-8 drop-shadow-lg">
+      <div className="h-[40rem] max-lg:h-[30rem] max-md:h-[25rem]">
         <Image src="/src/assets/pic1.jpg" />
-      </Modal>
-    </>
+      </div>
+      <InfoContainer />
+    </div>
   );
 }
